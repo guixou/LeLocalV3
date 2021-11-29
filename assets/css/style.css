@@ -1,0 +1,570 @@
+/*########################
+        Haeder
+########################*/
+
+.headerMain{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 100px 15px 100px;
+    background-color: rgba(20, 10, 10, 0.527);
+}
+
+nav a{
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+}
+
+nav a:hover{
+    border-bottom: 1px solid white;
+    margin-bottom: 0;
+}
+
+header h1{
+    position: absolute;
+    margin: 0;
+    margin-left: 20px;
+    color: white;
+    font-family: 'snubhore';
+    font-weight: 100;
+}
+
+.boutonShop{
+    border: 1px solid white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    background-color: gray;
+    transition:  0.5s ;
+}
+
+.boutonShop:hover{
+    background-color: darkgray;
+    margin-bottom: 1px;
+    color: black;
+    border-radius: 10px;
+}
+
+nav .logo{ /*a remplacer par le logo */
+    margin-right: 10%;
+}
+
+.LogoHeader{
+    width: 300px;
+    border-radius: 100%;
+    margin-top: 10%;
+}
+
+/* menue beurgeur responsive */
+
+#bouttonMenu{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 0px solid white;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.navNone{
+    display: none;
+}
+
+.lienNav{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+
+
+/*########################
+        acceuil
+########################*/
+
+#acceuil{
+    background-image: url("../images/background-acceuil.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-position: center;
+}
+
+/*réseau sociaux */
+
+.reseau{ 
+    font-size: 40px;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #dfe4ee;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.493);
+    border-radius: 20px;
+    min-width: 200px;
+}
+
+.reseau a{
+    color: white;
+}
+.fab{
+    transition: color 0.5s ;
+}
+
+.fa-facebook-f:hover{
+    color: #2A7BE5;
+}
+
+.fa-twitter:hover{
+    color: #1A91DA;
+}
+
+.fa-instagram:hover{
+    color: #B33194;
+}
+
+
+/*########################
+        Réalisation
+########################*/
+
+#realisation{
+    padding: 50px;
+    text-align: center;
+    background-color: #31353D;
+    max-height: calc(100vh - 100px);
+}
+
+#realisation img{
+    max-width: 65%;
+}
+
+
+/* slider */
+
+#slider {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    height: 500px;
+  }
+  
+#sliderPrecedent, #sliderSuivant {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    position: absolute;
+    font-size: 100px;
+    color: rgba(220, 220, 220, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+  }
+  
+#sliderPrecedent {
+    left: 0;
+  }
+  
+#sliderSuivant {
+    right: 0;
+  }
+  
+#sliderSuivant, #sliderPrecedent{
+      border: 0px; 
+      background-color: rgba(0, 0, 0, 0); 
+}
+  
+  
+#slider:hover #sliderPrecedent,
+#slider:hover #sliderSuivant {
+    opacity: 1;
+  }
+
+#nextSlide, #backSlide{
+      opacity: 0.5;
+  }
+
+/*########################
+        colab 
+########################*/
+
+#collaboration{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: #31353D;
+}
+
+#collaboration section{
+    background-color: white;
+    display: flex;
+    max-width: 70%;
+    border: 1px solid rgb(122, 114, 114);
+    border-radius: 10px;
+}
+
+#collaboration img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+.colabDate h2{
+    position: absolute;
+    margin-left: 40px;
+    font-family: 'Roboto';
+    text-shadow: 5px 2px 5px rgba(150, 150, 150, 1);;
+}
+
+.colabDate{
+    width: 100%;
+}
+
+.colabDescription{
+    width: 40%;
+    padding: 10px;
+}
+
+
+/*########################
+     à propos
+########################*/
+
+
+#àPropos{
+    display: flex;
+    justify-content: center;
+    background-image: url(../images/background.png);
+    background-size: 100px;
+    background-attachment: fixed;
+}
+
+#àPropos div{
+    background-color: white;
+    margin: 10% 20% 10% 20%;
+    padding:20px
+}
+
+#àPropos h3{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/*###########################
+    rendezVous 
+###########################*/
+
+
+#rendezVous{
+    display: flex;
+    align-items: center;
+    padding: 10% 1% 10% 1%;
+    background-image: url(../images/background.png);
+    background-size: 100px;
+    background-attachment: fixed;
+}
+
+/* #map{
+    width: 50%;
+} */
+
+.map iframe{
+    width: 100%;
+    height: 500px;
+    border: 0;
+}
+
+
+.contact{
+    width: 50%;
+    background-image: url("../images/background-acceuil.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    height: 500px;
+}
+
+.formulaire form{
+    border-radius: 10px;
+    padding: 5%;
+    background-color: white;
+    height: calc(100% - 100px);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formulaire input, .formulaire textarea, .formulaire button{
+    border: 1px solid lightgray;
+    border-radius: 0;
+    padding: 10px;
+    margin: 10px;
+}
+
+.subjectMail{
+    width: 100%;
+}
+
+.inputMail{
+    width: calc(50% - 42px);
+}
+
+.formulaire input{
+    height: 30px;
+}
+
+.formulaire textarea{
+    width: 100%;
+}
+
+/*###########################
+            shop 
+###########################*/
+
+.OngletShop h2{
+    text-align: center;
+    margin: 0;
+    padding: 100px 0 0 0;
+    font-family: 'Roboto';
+    font-size: 40px;
+}
+.shop{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.shop .product{
+    border: 1px solid black;
+    margin: 10% 3% 1% 3%;
+    width: 20%;
+    box-shadow: 0px 0px 15px 2px rgb(0 0 0 / 20%);
+    border-radius: 5px;
+}
+
+.shop .product .descriptionProduct{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.shop img{
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+}
+
+/* filtre shop */
+
+.shophidden{
+    display: none;
+}
+
+.filtre{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.filtre button{
+    background: black;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 1px;
+    margin: 10px;
+}
+
+.filtre button:hover{
+    background: rgb(75, 74, 74);
+}
+
+.filtre .filtreActif{
+    background-color: grey;
+}
+
+.OngletShop h2{
+    color: black;
+}
+
+
+/*###########################
+    page administration
+###########################*/
+
+.admin{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.delete form{
+    padding: 20px;
+}
+
+.headerAdmin{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.headerAdmin a{
+    border-bottom: 1px solid black;
+}
+
+.adminHome{
+    display: flex;
+    justify-content: center;
+}
+
+.adminHome div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+}
+
+.adminHome a{
+    border: 2px solid grey;
+    border-radius: 20px;
+    padding: 10%;
+    background-color: lightgray;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15%;
+}
+
+.notification{
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+
+/*###########################
+    responsive version tel 
+###########################*/
+
+@media (max-width: 1000px) {
+
+    .LogoHeader{
+        margin-top: 30%;
+    }
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lienNav{
+        width: auto;
+        flex-wrap: wrap;
+    }
+
+    .lienNav a{
+        margin-top: 10px;
+    }
+
+    #slider{
+        width: auto;
+    }
+    
+    #slider button{
+        opacity: 0.5;
+    }
+
+    #àPropos div{
+        margin: 0;
+    }
+
+    #rendezVous{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .contact{
+        width: 100%;
+        padding: 0;
+    }
+
+    nav .logo{
+        margin-right: 0;
+    }
+
+    #bouttonMenu{
+        display: inline;
+    }
+
+    .map{
+        width: 100%;
+    }
+
+    .formulaire{
+        width: 100%;
+        padding: 50px 0 0 0;
+    }
+
+    #collaboration{
+        padding: 20px 0 20px 0;
+        width: 100%;
+
+    }
+
+    #collaboration h2{
+        font-size: 30px;
+    }
+
+    #collaboration section{
+        max-width: 100%;
+        border-radius: 0;
+        border: 0;
+    }
+
+    #collaboration img{
+        border-radius: 0;
+    }
+
+    #realisation{
+        padding: 10px 0 100px 0
+    }
+
+    #slider{
+        height: auto;
+    }
+    /*shop responsive */
+    .shop .product{
+        width: auto;
+    }
+
+    .filtre{
+        flex-wrap: wrap;
+    }
+
+    .OngletShop h2{
+        font-size: 20px;
+    }
+ }

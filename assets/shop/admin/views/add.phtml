@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <script src="https://kit.fontawesome.com/0fc5bb7376.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../css/normalise.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" type="image/ico" href="../../images/favicon.ico"/>
+</head>
+<body>
+    <header class="headerAdmin">
+        <a href="delete.php">Supprimer un produit</a>
+        <a href="index.php">Page d'administration</a>
+        <a href="logout.php">Déconnexion</a>
+    </header>
+    <main>
+        <div class="formulaire">
+            <form action="productUpload.php" method="post" class="admin" enctype="multipart/form-data">
+                <label>Lien de l'image:</label>
+                <input type="file"name="picture">
+                <label>Nom du produit:</label>
+                <input type="text"name="name" placeholder="Nom du produit" required>
+                <label>Prix sans le signe €:</label>
+                <input type="number" name="price" placeholder="Prix" required>
+                <label>Catégorie du produit:</label>
+                <input name="description" required placeholder="product1, product2, product3, product4, product5" required>
+                <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <?php
+                if ($notification != ''):
+            ?>
+                <div class="notification">
+                    <p> Erreur : </p>
+                    <?= $notification; ?>
+                </div>
+            <?php
+                endif;
+            ?>
+        </div>
+    </main>
+</body>
+</html>

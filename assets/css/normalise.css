@@ -1,0 +1,48 @@
+/* font */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'snubhore';
+    src: url(../fonts/snubhore/Snubhore.otf);
+}
+
+@font-face {
+    font-family: 'oldlondon';
+    src: url(../fonts/oldlondon/OldLondon.ttf);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto';
+}
+
+footer{
+    text-align: center;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+h2{
+    font-family: 'snubhore';
+    font-size: 50px;
+    font-weight: 10;
+    color: white;
+}

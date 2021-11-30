@@ -1,9 +1,8 @@
 <?php
 
 function show(){ // afficher les produit
-    if(require("connect.php")){
-
-        
+    require "connect.php";
+    
     // on instancie la fonction de notre classe
     $connexion = new Connect();
 
@@ -20,6 +19,6 @@ function show(){ // afficher les produit
         
         $query->closeCursor();
         
-    }
+    
 
 }

@@ -33,8 +33,5 @@ if (isset($_GET['error'])) {
     }
 }
 
-//1 - connecter à mysql
-require '../assets/connect.php';
-
 //affichage du template
 require 'views/delete.phtml';

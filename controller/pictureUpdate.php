@@ -6,7 +6,10 @@ session_start();
 
 /* déclaration des variable sans balise */ 
 
-$safeupdatePicture = htmlspecialchars($_POST['updatePicture']);
+if( !ctype_digit($_POST['updatePicture'])) { // on verifie si on a bien un nombre (je ne passe plus par htmlspecialchars cela empèche le bon focntionnement des function)
+    header('location: delete.php?page=61');
+    exit;
+}
 
 //on est sur une page où on doit être identifié -> si la variable session n'existe pas -> rediriger l'utilisateur vers la page de login
 if (!isset($_SESSION['user'])) {
@@ -17,7 +20,7 @@ if (!isset($_SESSION['user'])) {
 //tester si on a bien un fichier
 
 if ($_FILES['picture']['error'] > 0) {
-    header('Location: delete.php?error=1');
+    header('Location: delete.php?page=62');
     exit;
 }
 
@@ -28,7 +31,7 @@ $allowed_file_types = ['image/png', 'image/jpeg' , 'image/jpg'];
 
 //tester si le type MIME du fichier ($_FILES['picture']['tmp_name'] est dans le tableau $allowed_file_types 
 if (!in_array(mime_content_type($_FILES["picture"]["tmp_name"]), $allowed_file_types)) {
-    header('Location: delete.php?error=2');
+    header('Location: delete.php?page=63');
     exit;
 }
 
@@ -53,19 +56,13 @@ switch(mime_content_type($_FILES["picture"]["tmp_name"]))
 
 require '../model/connect.php';
 
-
+require '../model/shopModel.php';
 // on instancie la fonction de notre classe
 $connexion = new Connect();
 
-
 $pdo = $connexion->connexion(); 
 
-$name = $pdo->query
-(
-    'SELECT picture FROM product WHERE id = ' . $pdo->quote($safeupdatePicture)
-);
-
-while ($pictureName = $name->fetch())
+$pictureName = getNameById($pdo, $_POST['updatePicture']);
 
 //suppression
 unlink('../public/images/uploads/'.$pictureName['picture']);
@@ -77,23 +74,13 @@ $resultat = move_uploaded_file($_FILES['picture']['tmp_name'],"../public/images/
 
 //tester $resultat
 if (!$resultat) {
-    header('Location: delete.php?error=3');
+    header('Location: delete.php?page=64');
     exit;
 }
 
 //mettre à jour la table Picture dans la bdd
-
-
-$query = $pdo->prepare
-(
-    'UPDATE product SET picture = ? WHERE Id = ?'
-);
-
-//executer la requete
-
-
-$query->execute([$name_file, $safeupdatePicture]);
+updatePicture($pdo, $name_file, $_POST['updatePicture']);
 
 //redirection
-header('Location: ../index.php?action=delete');
+header('Location: ../index.php?page=6');
 exit;

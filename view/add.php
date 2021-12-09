@@ -3,8 +3,8 @@
 <?php ob_start(); ?>
 
 <header class="headerAdmin">
-    <a href="index.php?action=delete">Supprimer un produit</a>
-    <a href="index.php?action=login">Page d'administration</a>
+    <a href="index.php?page=6">Supprimer un produit</a>
+    <a href="index.php?page=4">Page d'administration</a>
     <a href="controller/logout.php">Déconnexion</a>
 </header>
 <main>
@@ -20,16 +20,6 @@
             <input name="description" required placeholder="product1, product2, product3, product4, product5" required>
             <button type="submit" name="submit" class="btn btn-primary">Submit</button>
         </form>
-        <?php
-            if ($notification != ''):
-        ?>
-            <div class="notification">
-                <p> Erreur : </p>
-                <?= $notification; ?>
-            </div>
-        <?php
-            endif;
-        ?>
     </div>
 </main>
 

@@ -6,5 +6,5 @@ $_SESSION = [];
 
 session_destroy(); //détruire la session
 
-header('Location: ../index.php?action=shop');
+header('Location: ../index.php?page=2');
 exit;

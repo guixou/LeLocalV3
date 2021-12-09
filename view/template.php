@@ -16,10 +16,16 @@
     </head>
         
     <body>
+        <?php
+            if ($notification != ''):
+        ?>
+            <div class="notification">
+                <p> Erreur : </p>
+                <?= $notification; ?>
+            </div>
+        <?php
+            endif;
+        ?>
         <?= $content ?>
-        
-        <footer>
-            <p>No Cookies 🍪 © tout droit réservé: Le Local</p>
-        </footer>
     </body>
 </html>

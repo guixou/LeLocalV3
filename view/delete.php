@@ -7,22 +7,12 @@ $show_product= $posts;
 
 <header>
     <div class="headerAdmin">
-        <a href="index.php?action=add">Ajouter un produit</a>
-        <a href="index.php">Page d'administration</a>
-        <a href="logout.php">Déconnexion</a>
+        <a href="index.php?page=5">Ajouter un produit</a>
+        <a href="index.php?page=4">Page d'administration</a>
+        <a href="controller/logout.php">Déconnexion</a>
     </div>
 </header>
-<main> 
-        <?php
-            if ($notification != ''):
-        ?>
-            <div class="notification">
-                <p> Erreur : </p>
-                <?= $notification; ?>
-            </div>
-        <?php
-            endif;
-        ?>
+<main>
     <div class="shop">
         <?php foreach($show_product as $product): ?>
 

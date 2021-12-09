@@ -21,6 +21,7 @@ if (!isset($_SESSION['user'])) {
 // connection a la BDD
 require '../model/connect.php';
 
+require '../model/shopModel.php';
 
 // on instancie la fonction de notre classe
 $connexion = new Connect();
@@ -28,28 +29,11 @@ $connexion = new Connect();
 
 $pdo = $connexion->connexion();
 
-//récupéré l'id du produit a modifier
-
-$produit = $safeUpdateProduct;
-
 
 // modifier les élément dans la BDD
 
-$query = $pdo->prepare
-(
-    'UPDATE product SET name = ?, price = ?, description = ? WHERE Id = ?'
-);
-
-//on empèche les balise
-
-$valid_name = htmlspecialchars($safeName);
-
-$valid_description = htmlspecialchars($safeDescription);
-
-//executer la requete
-
-$query->execute([$valid_name, $safePrice, $valid_description, $produit]);
+updateProduct($pdo, $safeName, $safePrice, $safeDescription, $safeUpdateProduct);
 
 //redirection
-header('Location: ../index.php?action=delete');
+header('Location: ../index.php?page=6');
 exit;

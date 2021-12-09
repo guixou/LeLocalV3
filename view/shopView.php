@@ -10,8 +10,7 @@ $show_product= $posts;
     <a href="../../index.php"><h1 class="logo">Le local</h1></a>
     <nav id="nav">
         <div id="lienNav">
-            <a href="index.php?action=accueil">Accueil</a>
-            <a href="index.php?action=admin">admin</a>
+            <a href="index.php?page=1">Accueil</a>
         </div>
     </nav>
     <button id="bouttonMenu">≡</button>
@@ -40,6 +39,10 @@ $show_product= $posts;
         <?php endforeach?>
     </div>
 </main>
+
+<footer>
+    <p>No Cookies 🍪 © tout droit réservé: Le Local</p>
+</footer>
 
 <?php $content = ob_get_clean(); ?>
 

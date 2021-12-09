@@ -1,6 +1,6 @@
 <?php
 
-function shop() {
+function shop($notification) {
     require('model/shopModel.php');
     
     $posts = show();

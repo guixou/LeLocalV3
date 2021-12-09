@@ -9,7 +9,7 @@
             <a href="#àPropos">À Propos</a>
             <a href="#collaboration">Collab/Events</a>
             <a href="#rendezVous">Rendez-Vous</a>
-            <a href="index.php?action=shop" id="boutonShop">Shop</a>
+            <a href="index.php?page=2" id="boutonShop">Shop</a>
         </div>
     </nav>
     <button id="bouttonMenu">≡</button>
@@ -100,6 +100,10 @@
         </div>
     </section>
 </main>
+
+<footer>
+    <p>No Cookies 🍪 © tout droit réservé: Le Local</p>
+</footer>
 
 <?php $content = ob_get_clean(); ?>
 

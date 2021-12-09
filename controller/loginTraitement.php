@@ -13,14 +13,14 @@ est-ce que :
 - est-ce que l'email est au bon format
 */
 if(
-   !isset($safeEmail) || !filter_var($safeEmail, FILTER_VALIDATE_EMAIL) ||
-   !isset($safePassword) || empty($safePassword)
-    )
-    {
-        //redirection vers le formulaire
-        header('Location: index.php?action=admin');
-        exit;
-    }
+    !isset($safeEmail) || !filter_var($safeEmail, FILTER_VALIDATE_EMAIL) ||
+    !isset($safePassword) || empty($safePassword)
+)
+{
+    //redirection vers le formulaire
+    header('Location: ../index.php?page=31');
+    exit;
+}
 
 //on charge le fichier connect
 require ('../model/connect.php');
@@ -39,7 +39,7 @@ $existUser = getUser($pdo, $safeEmail);
 
 if (!$existUser) //si $existUser est false -> on a pas trouvé de User
 {
-        header('Location: index.php?action=admin');
+        header('Location: ../index.php?page=32');
         exit;
 }
 
@@ -48,7 +48,7 @@ if (!$existUser) //si $existUser est false -> on a pas trouvé de User
 if (!password_verify($safePassword, $existUser['Password']))
 {
     //redirection vers le formulaire
-        header('Location: index.php?action=admin');
+        header('Location: ../index.php?page=33');
         exit;
 }
 
@@ -65,5 +65,5 @@ if (!password_verify($safePassword, $existUser['Password']))
         
 
 //etape 5 : rediriger vers index.php
-header('location: ../index.php?action=login');
+header('location: ../index.php?page=4');
 exit;

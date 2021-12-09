@@ -19,7 +19,6 @@ function getUser ($pdo, $safeEmail) {
 
 
     //2 executer la requete
-    // Demande à PDO d'envoyer la requête à MySQL pour exécution.
     $query->execute([$safeEmail]);
 
     //4 - recupérer le résultat

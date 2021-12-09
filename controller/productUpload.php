@@ -21,7 +21,7 @@ if (!isset($_SESSION['user'])) {
 //tester si on a bien un fichier
 
 if ($_FILES['picture']['error'] > 0) {
-    header('Location: add.php?error=1');
+    header('Location: ../index?page=51');
     exit;
 }
 
@@ -32,7 +32,7 @@ $allowed_file_types = ['image/png', 'image/jpeg' , 'image/jpg'];
 
 //tester si le type MIME du fichier ($_FILES['picture']['tmp_name'] est dans le tableau $allowed_file_types 
 if (!in_array(mime_content_type($_FILES["picture"]["tmp_name"]), $allowed_file_types)) {
-    header('Location: add.php?error=2');
+    header('Location: ../index?page=52');
     exit;
 }
 
@@ -58,7 +58,7 @@ $resultat = move_uploaded_file($_FILES['picture']['tmp_name'],"../public/images/
 
 //tester $resultat
 if (!$resultat) {
-    header('Location: add.php?error=3');
+    header('Location: ../index?page=53');
     exit;
 }
 
@@ -66,25 +66,14 @@ if (!$resultat) {
 
 require '../model/connect.php';
 
-
+require '../model/shopModel.php';
 // on instancie la fonction de notre classe
 $connexion = new Connect();
 
-
 $pdo = $connexion->connexion();
 
-$query = $pdo->prepare
-(
-    'INSERT INTO product (picture, name, price, description) VALUES(?,?,?,?)'
-);
-
-//on empèche les balise
-
-
-//executer la requete
-
-$query->execute([$name_file, $safeName, $safePrice, $safeDescription]);
+addProduct($pdo, $name_file, $safeName, $safePrice, $safeDescription);
 
 //redirection
-header('Location: ../index.php?action=add');
+header('Location: ../index.php?page=5');
 exit;

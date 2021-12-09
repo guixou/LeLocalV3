@@ -1,6 +1,6 @@
 <?php
 
 
-function accueil() {
+function accueil($notification) {
     require('view/accueilView.php');
 }

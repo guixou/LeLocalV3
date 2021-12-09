@@ -5,7 +5,10 @@ session_start();
 
 /* déclaration des variable sans balise */ 
 
-$safeId = htmlspecialchars($_POST['id']);
+if( ! ctype_digit($_POST['id'])) {
+    header('location: maPage.php');
+    exit;
+}
 
 //on est sur une page où on doit être identifié -> si la variable session n'existe pas -> rediriger l'utilisateur vers la page de login
 if (!isset($_SESSION['user'])) {
@@ -18,6 +21,7 @@ if (!isset($_SESSION['user'])) {
 // connection a la BDD
 require '../model/connect.php';
 
+require '../model/shopModel.php';
 
 // on instancie la fonction de notre classe
 $connexion = new Connect();
@@ -27,14 +31,7 @@ $pdo = $connexion->connexion();
 
 //suppirmer l'image du dossier upload du projet
 
-//récupéré le nom de l'image
-
-$name = $pdo->query
-(
-    'SELECT picture FROM product WHERE id = ' . $pdo->quote($safeId)
-);
-
-while ($pictureName = $name->fetch())
+$pictureName = getNameById($pdo, $_POST['id']);
 
 //suppression
 unlink('../public/images/uploads/'.$pictureName['picture']);
@@ -42,16 +39,9 @@ unlink('../public/images/uploads/'.$pictureName['picture']);
 
 
 // suppression dans la BDD
-$query = $pdo->prepare
-(
-    'DELETE FROM product WHERE id = ?'
-);
 
-//executer la requete
-
-
-$query->execute([$safeId]);
+deleteProduct($pdo, $_POST['id']);
 
 //redirection
-header('Location: ../index.php?action=delete');
+header('Location: ../index.php?page=6');
 exit;

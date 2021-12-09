@@ -78,7 +78,7 @@ nav .logo{ /*a remplacer par le logo */
 }
 
 .navNone{
-    display: none;
+    display: flex;
 }
 
 .lienNav{
@@ -476,9 +476,16 @@ nav .logo{ /*a remplacer par le logo */
     }
     nav{
         flex-direction: column;
+        display: none;
+    }
+
+    .navShop {
         align-items: center;
     }
 
+    .logo, #bouttonMenu{
+        color: black;
+    }
     .lienNav{
         width: auto;
         flex-wrap: wrap;

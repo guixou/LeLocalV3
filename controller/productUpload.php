@@ -75,5 +75,5 @@ $pdo = $connexion->connexion();
 addProduct($pdo, $name_file, $safeName, $safePrice, $safeDescription);
 
 //redirection
-header('Location: ../index.php?page=5');
+header('Location: ../Add');
 exit;

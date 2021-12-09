@@ -65,5 +65,5 @@ if (!password_verify($safePassword, $existUser['Password']))
         
 
 //etape 5 : rediriger vers index.php
-header('location: ../index.php?page=4');
+header('location: ../Admin');
 exit;

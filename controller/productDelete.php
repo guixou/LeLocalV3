@@ -43,5 +43,5 @@ unlink('../public/images/uploads/'.$pictureName['picture']);
 deleteProduct($pdo, $_POST['id']);
 
 //redirection
-header('Location: ../index.php?page=6');
+header('Location: ../Delete');
 exit;

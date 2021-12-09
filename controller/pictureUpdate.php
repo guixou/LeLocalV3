@@ -82,5 +82,5 @@ if (!$resultat) {
 updatePicture($pdo, $name_file, $_POST['updatePicture']);
 
 //redirection
-header('Location: ../index.php?page=6');
+header('Location: ../Delete');
 exit;

@@ -35,5 +35,5 @@ $pdo = $connexion->connexion();
 updateProduct($pdo, $safeName, $safePrice, $safeDescription, $safeUpdateProduct);
 
 //redirection
-header('Location: ../index.php?page=6');
+header('Location: ../Delete');
 exit;

@@ -3,8 +3,8 @@
 <?php ob_start(); ?>
 
 <header class="headerAdmin">
-    <a href="index.php?page=6">Supprimer un produit</a>
-    <a href="index.php?page=4">Page d'administration</a>
+    <a href="Delete">Supprimer un produit</a>
+    <a href="Admin">Page d'administration</a>
     <a href="controller/logout.php">Déconnexion</a>
 </header>
 <main>

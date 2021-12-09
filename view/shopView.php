@@ -10,7 +10,7 @@ $show_product= $posts;
     <a href="../../index.php"><h1 class="logo">Le local</h1></a>
     <nav id="nav">
         <div id="lienNav">
-            <a href="index.php?page=1">Accueil</a>
+            <a href="Accueil">Accueil</a>
         </div>
     </nav>
     <button id="bouttonMenu">≡</button>

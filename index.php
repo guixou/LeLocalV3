@@ -108,4 +108,4 @@ switch($page)
     default:
         require 'controller/accueilController.php';
         accueil($notification);
-}  
+}

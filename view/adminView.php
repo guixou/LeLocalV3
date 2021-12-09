@@ -8,8 +8,8 @@
 </header>
 <main class="adminHome">
     <div>
-        <a href="index.php?page=5">Ajouter un produit</a>
-        <a href="index.php?page=6">Supprimer/modifier un produit</a>
+        <a href="Add">Ajouter un produit</a>
+        <a href="Delete">Supprimer/modifier un produit</a>
     </div>
 </main>
 

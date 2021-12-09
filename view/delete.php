@@ -7,8 +7,8 @@ $show_product= $posts;
 
 <header>
     <div class="headerAdmin">
-        <a href="index.php?page=5">Ajouter un produit</a>
-        <a href="index.php?page=4">Page d'administration</a>
+        <a href="Add">Ajouter un produit</a>
+        <a href="Admin">Page d'administration</a>
         <a href="controller/logout.php">Déconnexion</a>
     </div>
 </header>

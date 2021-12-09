@@ -1,0 +1,17 @@
+#réécrire les URL du site
+
+Options +FollowSymlinks
+
+RewriteEngine on
+
+RewriteRule ^Accueil$ index.php?page=1 [L]
+
+RewriteRule ^Shop$ index.php?page=2 [L]
+
+RewriteRule ^Login$ index.php?page=3 [L]
+
+RewriteRule ^Admin$ index.php?page=4 [L]
+
+RewriteRule ^Add$ index.php?page=5 [L]
+
+RewriteRule ^Delete$ index.php?page=6 [L]

@@ -9,7 +9,7 @@
             <a href="#àPropos">À Propos</a>
             <a href="#collaboration">Collab/Events</a>
             <a href="#rendezVous">Rendez-Vous</a>
-            <a href="index.php?page=2" id="boutonShop">Shop</a>
+            <a href="Shop" id="boutonShop">Shop</a>
         </div>
     </nav>
     <button id="bouttonMenu">≡</button>

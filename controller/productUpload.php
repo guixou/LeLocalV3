@@ -11,7 +11,7 @@ $safeDescription = htmlspecialchars($_POST['description']);
 
 //on est sur une page où on doit être identifié -> si la variable session n'existe pas -> rediriger l'utilisateur vers la page de login
 if (!isset($_SESSION['user'])) {
-    header('Location: login.php');
+    header('Location: Login');
     exit;
 }
 
@@ -35,16 +35,21 @@ if (!in_array(mime_content_type($_FILES["picture"]["tmp_name"]), $allowed_file_t
 }
 
 //construire le nouveau nom du fichier (tjrs renommer les fichiers uploadés)
+//récupéré la date pour ne pas avoir deux fichier de meme nom
+
+date_default_timezone_set('UTC');
+
+
 switch(mime_content_type($_FILES["picture"]["tmp_name"]))
 {
     case 'image/png':
         //construction du nom du fichier
-        $name_file = 'Shop_'.$_FILES['picture']['name'];
+        $name_file = 'Shop_'.date('m.d.y.H.i.s').$_FILES['picture']['name'];
         break;
         
     case 'image/jpeg':
         //construction du nom du fichier
-        $name_file = 'Shop_'.$_FILES['picture']['name'];
+        $name_file = 'Shop_'.date('m.d.y.H.i.s').$_FILES['picture']['name'];
         break;
 }
 

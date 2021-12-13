@@ -167,6 +167,7 @@ nav .logo{ /*a remplacer par le logo */
     overflow: hidden;
     justify-content: center;
     height: 500px;
+    max-height: 600px;
   }
   
 #sliderPrecedent, #sliderSuivant {
@@ -209,41 +210,77 @@ nav .logo{ /*a remplacer par le logo */
 
 #collaboration{
     display: flex;
-    justify-content: center;
     padding: 50px;
     background-color: #31353D;
+    flex-direction: column;
+    align-items: center;
 }
 
 #collaboration section{
-    background-color: white;
     display: flex;
     max-width: 70%;
     border: 1px solid rgb(122, 114, 114);
     border-radius: 10px;
 }
 
-#collaboration img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px 0 0 10px;
-}
-
-.colabDate h2{
-    position: absolute;
-    margin-left: 40px;
-    font-family: 'Roboto';
-    text-shadow: 5px 2px 5px rgba(150, 150, 150, 1);;
-}
-
-.colabDate{
-    width: 100%;
-}
-
-.colabDescription{
-    width: 40%;
+#collabSlider{
     padding: 10px;
+    background-color: white;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 500px;
+    max-width: 1200px;
 }
 
+#collabSlider a{
+    color: black;
+}
+
+#collabSlider li:hover{
+    color: white;
+}
+
+#collabSlider li{
+    min-width: 300px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+    background-color: #31353D;
+}
+
+#collabSlider ul{
+    list-style-type: none;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 70px;
+    height: 100%;
+    font-weight: bold;
+}
+
+#collabSlider img{
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+#collaboration button{
+    background-color: #31353D;
+    border: none;
+    padding: 5px;
+    color: white;
+}
+
+.actif{
+    color: white;
+}
 
 /*########################
      à propos

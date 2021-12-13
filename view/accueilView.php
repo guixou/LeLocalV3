@@ -57,7 +57,7 @@
         </div>
     </section>
 
-    <section id="collaboration">
+    <!-- <section id="collaboration">
         <section>
             <div class="colabDate">
                 <h2>10/08/2020</h2>
@@ -67,6 +67,28 @@
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit at cumque delectus. Nihil illo delectus aperiam doloribus aliquid nemo officia.</p>
             </div>
         </section>
+    </section> -->
+
+    <section id="collaboration">
+        <h2>Collaboration et évènement</h2>
+        <article id="collabSlider">
+            <ul>
+                <li><div id="li1" class="liAll" onclick="ChangeSlide(1)"><i class="fas fa-align-left"></i> Événement 1 </div></li>
+                <li><div id="li2" class="liAll" onclick="ChangeSlide(2)"><i class="fas fa-align-left"></i> Événement 2 </div></li>
+                <li><div id="li3" class="liAll" onclick="ChangeSlide(3)"><i class="fas fa-align-left"></i> Événement 3 </div></li>
+                <li><div id="li4" class="liAll" onclick="ChangeSlide(4)"><i class="fas fa-align-left"></i> Événement 4 </div></li>
+            </ul>
+            <div>  
+                <img src="public/images/training-image-01.jpg" alt="image du slider" id='collabSlide'>
+            
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                <p>
+                    Fusce laoreet malesuada rhoncus. Donec ultricies diam tortor, id auctor neque posuere sit amet. Aliquam pharetra, augue vel cursus porta, nisi tortor 
+                    vulputate sapien, id scelerisque felis magna id felis. Proin neque metus, pellentesque pharetra semper vel, accumsan a neque.
+                </p>
+                <button>Voir plus</button>
+            </div>
+        </article>
     </section>
                 
     <section id='rendezVous'> <!-- page 5 formulaire + adresse + plan -->

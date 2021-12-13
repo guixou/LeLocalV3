@@ -12,6 +12,7 @@
         <script src="public/js/filtre.js"></script> <!-- que pour le shop -->
         <script src="public/js/slider.js"></script> <!-- que pour l'accueil -->
         <script src="public/js/header.js"></script>
+        <script src="public/js/collabSlider.js"></script> <!-- que pour l'accueil -->
         <link rel="shortcut icon" type="image/ico" href="public/images/favicon.ico"/>
     </head>
         

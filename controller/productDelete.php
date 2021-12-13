@@ -3,10 +3,8 @@ declare(strict_types=1);
 
 session_start();
 
-/* déclaration des variable sans balise */ 
-
-if( ! ctype_digit($_POST['id'])) {
-    header('location: maPage.php');
+if( ! ctype_digit($_POST['id'])) { // on verifie si on a bien un nombre (je ne passe plus par htmlspecialchars cela empèche le bon focntionnement des function)
+    header('location: delete.php?page=62');
     exit;
 }
 
@@ -15,8 +13,6 @@ if (!isset($_SESSION['user'])) {
     header('Location: login.php');
     exit;
 }
-
-
 
 // connection a la BDD
 require '../model/connect.php';
@@ -35,8 +31,6 @@ $pictureName = getNameById($pdo, $_POST['id']);
 
 //suppression
 unlink('../public/images/uploads/'.$pictureName['picture']);
-
-
 
 // suppression dans la BDD
 

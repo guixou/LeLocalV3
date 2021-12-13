@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 session_start();
 
-
 /* déclaration des variable sans balise */ 
 
 $safeName = htmlspecialchars($_POST['name']);
@@ -17,7 +16,6 @@ if (!isset($_SESSION['user'])) {
 }
 
 // pour l'image: 
-
 //tester si on a bien un fichier
 
 if ($_FILES['picture']['error'] > 0) {
@@ -36,7 +34,6 @@ if (!in_array(mime_content_type($_FILES["picture"]["tmp_name"]), $allowed_file_t
     exit;
 }
 
-
 //construire le nouveau nom du fichier (tjrs renommer les fichiers uploadés)
 switch(mime_content_type($_FILES["picture"]["tmp_name"]))
 {
@@ -50,8 +47,6 @@ switch(mime_content_type($_FILES["picture"]["tmp_name"]))
         $name_file = 'Shop_'.$_FILES['picture']['name'];
         break;
 }
-
-
 
 //déplacer le fichier de l'espace temporaire vers le dossier d'upload du projet
 $resultat = move_uploaded_file($_FILES['picture']['tmp_name'],"../public/images/uploads/".$name_file);

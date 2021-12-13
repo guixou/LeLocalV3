@@ -13,6 +13,5 @@ class Connect{
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->exec('SET NAMES UTF8');
         return $pdo;
-        
     }
 }

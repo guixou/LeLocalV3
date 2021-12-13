@@ -3,9 +3,6 @@ declare(strict_types=1);
 
 session_start();
 
-
-/* déclaration des variable sans balise */ 
-
 if( !ctype_digit($_POST['updatePicture'])) { // on verifie si on a bien un nombre (je ne passe plus par htmlspecialchars cela empèche le bon focntionnement des function)
     header('location: delete.php?page=61');
     exit;
@@ -35,7 +32,6 @@ if (!in_array(mime_content_type($_FILES["picture"]["tmp_name"]), $allowed_file_t
     exit;
 }
 
-
 //construire le nouveau nom du fichier (tjrs renommer les fichiers uploadés)
 switch(mime_content_type($_FILES["picture"]["tmp_name"]))
 {
@@ -51,11 +47,9 @@ switch(mime_content_type($_FILES["picture"]["tmp_name"]))
 }
 
 //supprimer l'ancienne image
-
 //récupéré le nom de l'image
 
 require '../model/connect.php';
-
 require '../model/shopModel.php';
 // on instancie la fonction de notre classe
 $connexion = new Connect();
@@ -68,7 +62,6 @@ $pictureName = getNameById($pdo, $_POST['updatePicture']);
 unlink('../public/images/uploads/'.$pictureName['picture']);
 
 //mettre la nouvelle image
-
 //déplacer le fichier de l'espace temporaire vers le dossier d'upload du projet
 $resultat = move_uploaded_file($_FILES['picture']['tmp_name'],"../public/images/uploads/".$name_file);
 

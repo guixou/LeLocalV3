@@ -17,11 +17,9 @@ function getUser ($pdo, $safeEmail) {
         LIMIT 0,1'
     );
 
-
     //2 executer la requete
     $query->execute([$safeEmail]);
 
     //4 - recupérer le résultat
     return $query->fetch(PDO::FETCH_ASSOC);
-
 }

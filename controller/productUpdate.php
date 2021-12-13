@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 session_start();
 
-
 /* déclaration des variable sans balise */ 
 
 $safeUpdateProduct = htmlspecialchars($_POST['updateProduct']);
@@ -17,7 +16,6 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
-
 // connection a la BDD
 require '../model/connect.php';
 
@@ -26,9 +24,7 @@ require '../model/shopModel.php';
 // on instancie la fonction de notre classe
 $connexion = new Connect();
 
-
 $pdo = $connexion->connexion();
-
 
 // modifier les élément dans la BDD
 

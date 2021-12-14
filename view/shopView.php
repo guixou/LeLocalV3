@@ -7,7 +7,7 @@ $show_product= $posts;
 ?>
 
 <header class="headerMain">
-    <a href="../../index.php"><h1 class="logo">Le local</h1></a>
+    <a href="Accueil"><h1 class="logo">Le local</h1></a>
     <nav id="nav" class="navShop">
         <div id="lienNav">
             <a href="Accueil">Accueil</a>

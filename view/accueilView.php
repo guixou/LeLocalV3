@@ -2,7 +2,7 @@
 
 <?php ob_start(); ?>
 <header class="headerMain">
-    <a href="index.php"><h1 class="logo">Le local</h1></a>
+    <a href="Accueil"><h1 class="logo">Le local</h1></a>
     <nav id="nav">
         <div class="lienNav">
             <a href="#realisation">Réalisation</a>

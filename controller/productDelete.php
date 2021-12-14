@@ -4,7 +4,7 @@ declare(strict_types=1);
 session_start();
 
 if( ! ctype_digit($_POST['id'])) { // on verifie si on a bien un nombre (je ne passe plus par htmlspecialchars cela empèche le bon focntionnement des function)
-    header('location: ../index?page=62');
+    header('location: ../index.php?page=62');
     exit;
 }
 

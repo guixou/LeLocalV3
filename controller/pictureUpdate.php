@@ -4,7 +4,7 @@ declare(strict_types=1);
 session_start();
 
 if( !ctype_digit($_POST['updatePicture'])) { // on verifie si on a bien un nombre (je ne passe plus par htmlspecialchars cela empèche le bon focntionnement des function)
-    header('location: ../index?page=61');
+    header('location: ../index.php?page=61');
     exit;
 }
 
@@ -17,7 +17,7 @@ if (!isset($_SESSION['user'])) {
 //tester si on a bien un fichier
 
 if ($_FILES['picture']['error'] > 0) {
-    header('Location: ../index?page=62');
+    header('Location: ../index.php?page=62');
     exit;
 }
 
@@ -28,7 +28,7 @@ $allowed_file_types = ['image/png', 'image/jpeg' , 'image/jpg'];
 
 //tester si le type MIME du fichier ($_FILES['picture']['tmp_name'] est dans le tableau $allowed_file_types 
 if (!in_array(mime_content_type($_FILES["picture"]["tmp_name"]), $allowed_file_types)) {
-    header('Location: ../index?page=63');
+    header('Location: ../index.php?page=63');
     exit;
 }
 
@@ -67,7 +67,7 @@ $resultat = move_uploaded_file($_FILES['picture']['tmp_name'],"../public/images/
 
 //tester $resultat
 if (!$resultat) {
-    header('Location: ../index?page=64');
+    header('Location: ../index.php?page=64');
     exit;
 }
 
@@ -75,5 +75,5 @@ if (!$resultat) {
 updatePicture($pdo, $name_file, $_POST['updatePicture']);
 
 //redirection
-header('Location: ../Delete');
+header('Location: ../Add');
 exit;

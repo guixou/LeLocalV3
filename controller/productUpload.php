@@ -19,7 +19,7 @@ if (!isset($_SESSION['user'])) {
 //tester si on a bien un fichier
 
 if ($_FILES['picture']['error'] > 0) {
-    header('Location: ../index?page=51');
+    header('Location: ../index.php?page=51');
     exit;
 }
 
@@ -30,7 +30,7 @@ $allowed_file_types = ['image/png', 'image/jpeg' , 'image/jpg'];
 
 //tester si le type MIME du fichier ($_FILES['picture']['tmp_name'] est dans le tableau $allowed_file_types 
 if (!in_array(mime_content_type($_FILES["picture"]["tmp_name"]), $allowed_file_types)) {
-    header('Location: ../index?page=52');
+    header('Location: ../index.php?page=52');
     exit;
 }
 
@@ -58,7 +58,7 @@ $resultat = move_uploaded_file($_FILES['picture']['tmp_name'],"../public/images/
 
 //tester $resultat
 if (!$resultat) {
-    header('Location: ../index?page=53');
+    header('Location: ../index.php?page=53');
     exit;
 }
 

@@ -4,7 +4,23 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log("page charger")
 
-    let slide = new Array("public/images/slider/slider-1.jpeg", "public/images/slider/slider-2.jpeg", "public/images/slider/slider-3.jpeg", "  public/images/slider/slider-4.jpeg");
+    let slide = new Array(
+        "public/images/slider/slider-1.jpeg",
+        "public/images/slider/slider-2.jpeg",
+        "public/images/slider/slider-3.jpeg",
+        "public/images/slider/slider-4.jpeg",
+        "public/images/slider/slider-5.jpeg",
+        "public/images/slider/slider-6.jpeg",
+        "public/images/slider/slider-7.jpeg",
+        "public/images/slider/slider-8.jpeg",
+        "public/images/slider/slider-9.jpeg",
+        "public/images/slider/slider-10.jpeg",
+        "public/images/slider/slider-11.jpeg",
+        "public/images/slider/slider-12.jpeg",
+        "public/images/slider/slider-13.jpeg",
+        "public/images/slider/slider-14.jpeg",
+        "public/images/slider/slider-15.jpeg",
+        );
     let numero = 2;
     let nextNumero = 3;
     let backNumero = 1

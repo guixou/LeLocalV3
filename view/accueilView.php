@@ -40,35 +40,37 @@
         <div>
             <h3>À Propos</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis at asperiores temporibus fugiat ad ab eveniet odit adipisci,
-                    provident doloribus exercitationem consectetur ducimus atque voluptatibus aliquam maiores, deserunt pariatur enim excepturi illum
-                    necessitatibus quas quidem quo. Delectus pariatur ad distinctio veniam asperiores itaque, illum aliquid dignissimos neque ducimus quis ut!
+                Au Local, la décoration de votre corps est notre passion depuis 2002. Votre satisfaction est notre moteur. 
+                C’est pour cela que nous mettons tout en œuvre afin de vous satisfaire… Que ce soit pour un Piercing, un Tatouage ou simplement 
+                pour sublimer votre corps avec un beau bijou, nous n’arrêterons jamais de nous réinventer pour vous faire plaisir.
             </p>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis at asperiores temporibus fugiat ad ab eveniet odit adipisci,
-                    provident doloribus exercitationem consectetur ducimus atque voluptatibus aliquam maiores, deserunt pariatur enim excepturi illum
-                    necessitatibus quas quidem quo. Delectus pariatur ad distinctio veniam asperiores itaque, illum aliquid dignissimos neque ducimus quis ut!
+                Au Local vous aurez à faire à une équipe professionnelle, passionnée, dynamique et respectueuse de vos demandes. 
+                Que ce soit pour un Piercing, un Tatouage ou pour le choix de vos bijoux, chaque membre de l’équipe du Local sera là pour 
+                vous aiguiller dans vos choix et vous apporter les meilleurs conseils. Notre priorité est et restera votre satisfaction !
             </p>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis at asperiores temporibus fugiat ad ab eveniet odit adipisci,
-                    provident doloribus exercitationem consectetur ducimus atque voluptatibus aliquam maiores, deserunt pariatur enim excepturi illum
-                    necessitatibus quas quidem quo. Delectus pariatur ad distinctio veniam asperiores itaque, illum aliquid dignissimos neque ducimus quis ut!
+                Au Local nous avons l’amour du travail bien fait et nous aimons être fiers de tous les actes que nous réalisons sur votre corps. 
+                C’est pour cela que chaque membre de l’équipe se réjouit de votre satisfaction et de chacun de vos retours positifs. Nous chercherons 
+                toujours à en faire plus pour vous
             </p>
         </div>
     </section>
 
-    <!-- <section id="collaboration">
+    <section id="collaboration">
+        <h2>Collaboration et évènement</h2>
         <section>
             <div class="colabDate">
-                <h2>10/08/2020</h2>
+                <h3>Soirée techno Le 10/03/2020</h3>
                 <img src="public/images/contact-bg.jpg" alt="Image Evénement">
             </div>
             <div class="colabDescription">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit at cumque delectus. Nihil illo delectus aperiam doloribus aliquid nemo officia.</p>
+                <p>Venez vous ambiancer le jeudi 10 mars dès 20h30 avec une soirée DJ.</p>
+                <p>Les talentueux DJ Niuored & DJ Framboisier seront présents pour vous ambiancer !</p>
             </div>
         </section>
-    </section> -->
-
+    </section>
+<!-- 
     <section id="collaboration">
         <h2>Collaboration et évènement</h2>
         <article id="collabSlider">
@@ -89,7 +91,7 @@
                 <button>Voir plus</button>
             </div>
         </article>
-    </section>
+    </section> -->
                 
     <section id='rendezVous'> <!-- page 5 formulaire + adresse + plan -->
         <div class="contact">

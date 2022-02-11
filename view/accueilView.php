@@ -67,6 +67,7 @@
             <div class="colabDescription">
                 <p>Venez vous ambiancer le jeudi 10 mars dès 20h30 avec une soirée DJ.</p>
                 <p>Les talentueux DJ Niuored & DJ Framboisier seront présents pour vous ambiancer !</p>
+                <p></p>
             </div>
         </section>
     </section>

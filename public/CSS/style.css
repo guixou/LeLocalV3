@@ -225,6 +225,10 @@ nav .logo{
     text-align: center;
 }
 
+#collaboration section img{
+    width: 100%;
+}
+
 #collabSlider{
     padding: 10px;
     background-color: white;
